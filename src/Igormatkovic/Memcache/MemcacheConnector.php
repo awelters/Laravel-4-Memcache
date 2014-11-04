@@ -26,7 +26,7 @@ class MemcacheConnector {
 			);
 		}
 
-		if ($memcached->getVersion() === false)
+		if (@$memcached->getVersion() === false)
 		{
 			throw new \RuntimeException("Could not establish Memcache connection.");
 		}
